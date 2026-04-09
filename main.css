@@ -1,0 +1,35 @@
+body{
+    background: #ffffff(255, 255, 255);
+}
+header{
+    text-align: center;
+}
+main{text-align: center;
+//background: rgb(196, 123, 123);
+width:50%;
+margin:auto;
+}
+table
+{
+    width: 100%;
+    border: 1px black solid;
+    background-color: lightblue;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px gray;
+}
+
+input[type="text"]{width: 100%;}
+input[type="password"]{width: 100%;}
+input[type="number"]{width: 100%;}
+input[type="email"]{width:100%;}
+input[type="date"]{width: 100%;}
+input[type="time"]{width: 100%;}
+input[type="submit"]{width: 40%;background: rgb(33, 150, 243); color: white;}
+input[type="reset"]{width: 40%;background: rgb(33, 150, 243); color: white;}
+select{width:100%}
+.textstyle
+{
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+}
