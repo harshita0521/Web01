@@ -85,14 +85,48 @@ header{
     text-decoration:underline;
 }
 
-/* Footer */
-footer{
-    margin-top:20px;
-    text-align:center;
-    padding:15px;
-    background:#0b1d3a;
-    color:white;
+/*Footer*/
+.footer{
+    background-color: #0f172a;
+    color: white;
+    padding: 40px 0 0 0;
+    width: 100%;
 }
+
+.footer h4{
+margin-bottom: 10px;
+margin-left:20px;
+text-align: center;
+}
+
+.footer ul{
+    list-style: none;
+    padding: 0;
+   
+}
+
+.footer ul li{
+    margin-bottom: 8px;
+    //display: inline;
+    margin-left:20px;
+    text-align: center;
+}
+
+.footer ul li a:hover{
+color: #60a5fa;
+}
+
+.footer-right p{
+    margin-left:20px;
+    text-align: center;
+}
+.footer-bottom{
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px 0;
+    background-color: #020617;
+}
+
 
 /* Mobile Devices */
 @media (max-width: 600px){
