@@ -37,12 +37,12 @@ select{width:100%}
 }
 
 @media (max-width:600px){
-
+ 
     header{
         text-align: center;
     }
 table{
-width:95%;
+width:350px;
 }
 
 td{
