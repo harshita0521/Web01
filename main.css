@@ -3,6 +3,7 @@ body{
 }
 header{
     text-align: center;
+    
 }
 main{text-align: center;
 //background: rgb(196, 123, 123);
@@ -12,6 +13,7 @@ margin:auto;
 table
 {
     width: 100%;
+    max-width: 1000px;
     border: 1px black solid;
     background-color: lightblue;
     padding: 30px;
@@ -32,4 +34,52 @@ select{width:100%}
 {
     color: rgb(0, 0, 0);
     font-size: 50px;
+}
+
+@media (max-width:600px){
+
+    header{
+        text-align: center;
+    }
+table{
+width:95%;
+}
+
+td{
+display:block;
+width:100%;
+text-align:left;
+padding:5px 0;
+}
+
+tr{
+display:block;
+margin-bottom:12px;
+}
+
+/* inputs full width */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="file"],
+select,
+textarea{
+width:100%;
+}
+
+/* textarea height */
+textarea{
+height:120px;
+}
+
+/* radio & checkbox spacing */
+input[type="radio"],
+input[type="checkbox"]{
+width:auto;
+margin-right:5px;
+}
+
+
 }
