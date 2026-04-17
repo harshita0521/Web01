@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio_Video</title>
+</head>
+<style>
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e7e7e7;
+}
+/* Media content(Audio/Video) */
+.media-container{
+    text-align: center;
+}
+audio, video{
+    display: block;
+    margin: 20px auto;
+}
+
+video{
+    max-width:100%;
+    height:auto;
+}
+
+/* Header */
+header{
+    background:#0b1d3a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:30px;
+    letter-spacing:2px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+/*Footer*/
+.footer{
+    background-color: #0f172a;
+    color: white;
+    padding: 40px 0 0 0;
+    width: 100%;
+}
+
+.footer h4{
+margin-bottom: 10px;
+margin-left:20px;
+text-align: center;
+}
+
+.footer ul{
+    list-style: none;
+    padding: 0;
+   
+}
+
+.footer ul li{
+    margin-bottom: 8px;
+    //display: inline;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.footer ul li a:hover{
+color: #60a5fa;
+}
+
+.footer-right p{
+    margin-left:20px;
+    text-align: center;
+}
+.footer-bottom{
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px 0;
+    background-color: #020617;
+}
+
+
+/* Mobile Devices */
+@media (max-width: 600px){
+
+    header{
+        font-size:20px;
+        padding:15px;
+    }
+
+    footer{
+        font-size:14px;
+        padding:10px;
+    }
+}
+</style>
+<body>
+<header>Using Media (Audio/Video) in my Web Page</header>
+<!--creating the div for displaying my content here-->
+
+  <div class="media-container">
+    <audio controls autoplay loop muted>
+        <source src="Images/ad1.mp3" type="audio/mp3">
+        <h1>Update your browser/This audio is not supported in your web browser</h1>
+    </audio>
+    <video controls autoplay loop muted>
+        <source src="Images/vd1.mp4" type="video/mp4">
+        <h1>Update your browser/This video is not supported in your web browser</h1>
+    </video>
+  </div>
+  <footer class="footer">
+            
+
+            <div class="footer-center">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="practice.html">Practice Work</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <h4>Contact</h4>
+                <p>Email:harshita721721@gmail.com</p>
+                <p>Location: New Delhi,India</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Harshita | All Rights Reserved</p>
+            </div>
+        </footer>
+
+
+</body>
+</html>
