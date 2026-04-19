@@ -1,7 +1,12 @@
 <!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+</head>
 
 <html>
-<head><title>Photo Gallery</title></head>
 
 <header>
 MY PHOTO GALLERY
@@ -14,7 +19,9 @@ MY PHOTO GALLERY
  to{transform:scale(1);}
 }
 
-
+html{
+    scroll-behavior: smooth;
+}
 
 
 header
@@ -38,7 +45,7 @@ width:200px;
 height:200px;
 margin:40px;
 box-shadow:10px 10px 10px gray;
-border-radius:40px;
+border-radius:20px;
 transition:0.50s;
 animation:zoom 1s;
 }
@@ -50,12 +57,17 @@ animation:zoom 1s;
 border-radius:100px;
 }
 
+@media (max-width:600px){.picstyle{
+margin-left: 80px;
+}
+}
 main
 {
 width:85%;
 margin:auto;
 
 }
+
 </style>
 
 
