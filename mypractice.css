@@ -73,6 +73,7 @@ header{
     text-decoration: none;
     font-size: 22px;
     transition: 0.3s;
+
 }
 .content ul li a:hover{
 background: #020617;
@@ -82,6 +83,7 @@ background: #020617;
 @media (min-width:800px){
 .content ul{
     grid-template-columns:repeat(4,1fr);
+    margin: 0 auto;
 }
 }
 /*Footer*/

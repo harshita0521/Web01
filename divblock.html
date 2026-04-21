@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div Block</title>
+</head>
+<style>
+ *{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7fb;
+ }  
+
+ html{
+    scroll-behavior: smooth;
+ }
+
+ div{
+   // border: 1px black solid;
+ } 
+ 
+ /* Header */
+header{
+    background:#0b1d3a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:30px;
+    letter-spacing:2px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+}
+ #header{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    
+ }
+ #col1{
+    width: 400px;
+    height: 300px;
+    padding: 5px;
+    text-align: center;
+    float: left;
+    margin: 2px;
+    border: 4px #0b1d3a outset;
+ }
+
+#col1 h3{
+margin: 10px;
+}
+
+#col1 img{
+    border-radius: 50%;
+    box-shadow: 2px 4px 8px gray;
+}
+
+ #col2{
+    width: 400px;
+    height: 300px;
+    padding: 5px;
+    text-align: center;
+    float: left;
+    margin: 2px;
+    border: 4px rgb(54, 8, 8) solid;
+    border: 4px rgb(54, 8, 8) ridge;
+    border: 4px rgb(54, 8, 8) outset;
+    border: 4px rgb(54, 8, 8) inset;
+    border: 4px rgb(54, 8, 8) dotted;
+    border: 4px rgb(54, 8, 8) dashed;
+    border: 4px #0b1d3a outset;
+ }
+
+ #col2 ul{
+    list-style: none;
+ }
+ #col3{
+ width: 400px;
+    height: 300px;
+    padding: 5px;
+    text-align: center;
+    float: left;
+    margin: 2px;
+    border: 4px #0b1d3a outset;
+    }
+    #col3 ul{
+     list-style: none;
+    }
+ #main{
+    width: 100%;
+    margin: auto;
+    height: auto;
+    text-align: center;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+   }
+/* for mobile screen */
+@media (max-width:600px){
+    #col1, #col2, #col3{
+        width: 100%;
+        float: none;
+        margin: 10px 0;
+        border:4px #0b1d3a inset ;
+    }
+    #main{
+        width: 100%;
+    }
+    header{
+        font-size:20px;
+        padding:15px;
+    }
+    footer{
+        font-size:14px;
+        padding:10px;
+    }
+}
+
+    #footer{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        color: white;
+        background: #0b1d3a;
+        text-align: center;
+        padding: 10px;
+        clear: both;
+    }
+</style>
+<body>
+    <header>DIV PRACTICE</header>
+  <div id="header">
+    <div id="col1">
+        <img src="Images/mypfp.jpg" width="180px" height="auto">
+        <h3>Harshita</h3>
+        <p>UI/UX Designer | Graphic Designer</p>
+    </div>
+
+    <div id="col2">
+        <h2>Practice Work</h2>
+        <ul>
+        <li><a href="index.html">Index</a></li>
+            <li><a href="myresponsiveprofile.html">Responsive profile</a></li>
+            <li><a href="photogallery.html">Photo gallery</a></li>
+            <li><a href="bookmark.html">Bookmark</a></li>
+            <li><a href="list.html">List</a></li>
+            <li><a href="table.html">Table</a></li>
+            <li><a href="login_form.html">Login form</a></li>
+            <li><a href="registration form.html">Registration form</a></li>
+            <li><a href="banner.html">Banner</a></li>
+            <li><a href="banner2.html">Run banner</a></li>
+            <li><a href="iframe.html">Iframe</a></li>
+            <li><a href="iframe modified.html">Iframe II</a></li>
+            <li><a href="audiovideo.html">Media(Audio/Video)</a></li>
+            <li><a href="audiovideo2.html">Video</a></li>
+        </ul>
+        </div>
+        
+    <div id="col3">
+        <h2>Web Links</h2>
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="practice.html">Practice Work</a></li>
+        <li><a href="https://www.behance.net/harshitchaturv14">Behance</a></li>
+        <li><a href="https://www.figma.com/design/RJkfb58lOjTedy1RDZhgZb/Assignments">Figma</a></li>
+        <li><a href="http://Pinterest.com">Pinterest</a></li>
+    </ul></div>
+  </div>  
+  <div id="main"><h2>About Me</h2><p>Welcome to my web page,I'm a passionate and creative UI/UX design learner. Currently pursuing a UI/UX design course along with graphic designing and web designing ,I'm building my skills in creating clean, user friendly, and visually appealing designs while improving my creativity and problem-solving abilities.</p></div>
+  <div id="footer">&copy; 2026 Harshita | All Rights Reserved</div>
+</body>
+</html>
