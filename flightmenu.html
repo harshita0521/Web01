@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
+    <title>Flight menu</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+    }
+    #menu{
+        height: auto;
+    }
+    ol{
+        background: rgb(253, 253, 190);
+        list-style: none;
+        transition: 0.50s;
+        position: relative;
+        left: -1500px;
+        //top: -15px;
+    }
+    ol li{
+        padding: 10px;
+        //margin-left: -40px;
+    }
+    ol li:hover{
+        background: lavender;
+    }
+    #menu:hover ol{
+        left: 0px;
+        cursor: pointer;
+    }
+
+/* Header */
+header{
+    background:#0b1d3a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:30px;
+    letter-spacing:2px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+    /*Footer*/
+.footer{
+    margin-top: 15px;
+    background-color: #0f172a;
+    color: white;
+    padding: 40px 0 0 0;
+    width: 100%;
+}
+
+.footer h4{
+margin-bottom: 10px;
+margin-left:20px;
+text-align: center;
+}
+
+.footer ul{
+    list-style: none;
+    padding: 0;
+   
+}
+
+.footer ul li{
+    margin-bottom: 8px;
+    //display: inline;
+    margin-left:20px;
+    text-align: center;
+}
+
+.footer ul li a:hover{
+color: #60a5fa;
+}
+
+.footer-right p{
+    margin-left:20px;
+    text-align: center;
+}
+.footer-bottom{
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px 0;
+    background-color: #020617;
+}
+
+/* for mobile screen */
+@media (max-width:600px){
+footer{
+        font-size:14px;
+        padding:10px;
+    }
+    header{
+        font-size:24px ;
+        padding: 15px;
+    }
+}
+</style>
+<body>
+<header>Flight-Menu</header>
+    <main>
+        <div id="menu">
+            <span class="material-symbols-outlined">
+                <i class="ri-menu-line"></i></span>
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="practice.html">Practice Work</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ol>
+        </div>
+    </main>
+    <footer class="footer">
+            
+
+            <div class="footer-center">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="practice.html">Practice Work</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <h4>Contact</h4>
+                <p>Email:harshita721721@gmail.com</p>
+                <p>Location: New Delhi,India</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Harshita | All Rights Reserved</p>
+            </div>
+</body>
+</html>
