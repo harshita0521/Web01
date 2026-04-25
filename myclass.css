@@ -23,14 +23,24 @@ justify-content:space-between;
 align-items:center;
 padding:20px;
 position:relative;
-background-color:#f5f7fb;
-box-shadow: 0px 2px 8px grey;
+background-color:#0b1d3a;
+box-shadow: 2px 4px 8px grey;
+}
+nav ul li a{
+text-decoration:none;
+color:#ffffff;
+}
+
+
+nav ul li a:hover{
+background: #020617;
+color:rgb(233, 231, 231);
 }
 
 .logo{
 font-size: 28px;
 font-weight: bold;
-color: #0b1d3a;
+color: white;
 }
 
 .nav-links{
@@ -41,7 +51,7 @@ list-style:none;
 
 .menu-icon{
 display:none; 
-color: #0b1d3a;  /* hide hamburger on desktop */
+color: white;  /* hide hamburger on desktop */
 }
 
 #menu-toggle{
@@ -65,7 +75,7 @@ position:absolute;
 top:70px;
 left:0;
 width:100%;
-background:white;
+background:#0f172a;
 box-shadow: 2px 2px 8px grey;
 text-align:center;
 }
@@ -205,6 +215,6 @@ footer{
     .logo{
 font-size: 24px;
 font-weight: bold;
-color: #0b1d3a;
+color: white;
 }
 }

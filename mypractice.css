@@ -66,7 +66,8 @@ header{
 .content ul li a{
     display: block;
     background: #0b1d3a;
-    color: #d1f1ff;
+   box-shadow: 0px 4px 10px grey;
+    color: #ffffff;
     padding: 60px 20px;
     text-align: center;
     border-radius: 10px;
@@ -77,6 +78,7 @@ header{
 }
 .content ul li a:hover{
 background: #020617;
+
 }
 
 /* for desktop */
