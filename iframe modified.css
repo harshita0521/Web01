@@ -19,7 +19,7 @@ header{
 
 body{
     background: #f5f7fb;
-    margin: 0;
+    margin: 0px;
 }
 
 .iframe-container{
@@ -31,7 +31,7 @@ body{
 .sidebar{
     margin-top: 10px;
     width: 20%;
-    background:#a9b5ca;
+    background:#cfdbf0;
     padding: 20px;
     border-radius: 10px;
 }
@@ -39,6 +39,7 @@ body{
 .sidebar a{
     display: block;
     text-align: center;
+    padding: 10px 0px;
 }
 
 .sidebar a:hover{
@@ -48,6 +49,8 @@ background: #ffffff;
 .iframe-content{
     width: 80%;
     flex: 1;
+    background: #0b1d3a;
+    border-radius: 10px;
 }
 
 iframe{

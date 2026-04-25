@@ -65,7 +65,8 @@ position:absolute;
 top:70px;
 left:0;
 width:100%;
-background:#a9b5ca;
+background:white;
+box-shadow: 2px 2px 8px grey;
 text-align:center;
 }
 
