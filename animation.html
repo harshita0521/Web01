@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<style>
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+}
+
+/* Header */
+header{
+    background:#0b1d3a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:30px;
+    letter-spacing:2px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+}
+
+.text-style{
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 40px;
+    text-align: justify;
+    border:4px inset #0b1d3a;
+    //text-indent: 40px;
+}
+
+#sub{
+    display: inline-block;
+    font-size: 30px;
+    padding: 10px;
+    color: #020617;
+}
+
+#sub:hover{
+cursor: pointer;
+animation:pulse;
+animation-duration: 0.60s;
+}
+
+/*Footer*/
+.footer{
+    margin-top: 10px;
+    background-color: #0f172a;
+    color: white;
+    padding: 40px 0 0 0;
+    width: 100%;
+}
+
+.footer h4{
+margin-bottom: 10px;
+margin-left:20px;
+text-align: center;
+}
+
+.footer ul{
+    list-style: none;
+    padding: 0;
+   
+}
+
+.footer ul li{
+    margin-bottom: 8px;
+    //display: inline;
+    margin-left:20px;
+    text-align: center;
+}
+
+.footer ul li a:hover{
+color: #60a5fa;
+}
+
+.footer-right p{
+    margin-left:20px;
+    text-align: center;
+}
+.footer-bottom{
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px 0;
+    background-color: #020617;
+}
+/* for mobile screen */
+@media (max-width:600px){
+footer{
+        font-size:14px;
+        padding:10px;
+    }
+   header{
+        font-size:20px;
+        padding:15px;
+    }
+    #sub{
+        font-size: 26px;
+    }
+    .text-style{
+    font-size: 16px;
+}}
+
+</style>
+<body>
+  <header class="animate__animated animate__fadeInRight ">Animation in HTML</header> 
+  <main>
+    <section>
+        <h1 id="sub">About</h1>
+        <p class="text-style animate__animated animate__fadeInLeft">Animation in HTML is used to make web pages more attractive, modern, and interactive. It helps in adding movement and visual effects to elements such as text, images, buttons, and boxes. HTML provides the basic structure of the webpage, while CSS and JavaScript are commonly used to create animations. With animation, objects can move, rotate, fade, change color, or resize smoothly. It improves user experience by making websites more engaging and easy to understand. For example, buttons can animate when clicked, images can slide into the page, and loading icons can rotate. However, animation should be used carefully because too many effects can distract users and slow down the website. Overall, animation in HTML is an important feature for creating creative and attractive web pages.
+</p>
+<p>
+
+</p>
+    </section>
+  </main> 
+  <footer class="footer">
+            
+
+            <div class="footer-center">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="practice.html">Practice Work</a></li>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <h4>Contact</h4>
+                <p>Email:harshita721721@gmail.com</p>
+                <p>Location: New Delhi,India</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Harshita | All Rights Reserved</p>
+            </div>
+        </footer>
+</body>
+</html>
