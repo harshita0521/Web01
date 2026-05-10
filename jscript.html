@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Work</title>
+    <title>JavaScript Work</title>
 </head>
 <style>
     
@@ -34,19 +34,32 @@ header{
     box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 
+#footer{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        color: white;
+        background: #0b1d3a;
+        text-align: center;
+        padding: 10px;
+        clear: both;
+    }
+
+
 /* Main Content */
 .content ul{
-    margin: 5%;
+    margin: 20px;
     display:grid;
     list-style: none;
     padding: 0;
+    gap: 20px;
 }
 .content ul li a{
     display: block;
-    background: #0b1d3a;
+    background: lightblue;
    box-shadow: 0px 4px 10px grey;
-    color: #ffffff;
-    padding: 60px 20px;
+    color: #020617;
+    padding: 20px 10px;
     text-align: center;
     border-radius: 10px;
     text-decoration: none;
@@ -56,18 +69,40 @@ header{
 }
 .content ul li a:hover{
 background: #020617;
+color: lightblue;
 
 }
 
+/* Mobile Devices */
+@media (max-width: 600px){
+
+    header{
+        font-size:20px;
+        padding:15px;
+    }
+
+.content ul li a{
+    font-size: 20px;
+}
+
+    #footer{
+        margin-top: 10px;
+        font-size:14px;
+        padding:10px;
+    }
+}
 
 </style>
 <body>
-    <header>My Projects</header>
+    <header>JavaScript Work</header>
     <div class="content">
         <ul>
-            <li><a href="https://harshita0521.github.io/Web02/">AOTM Work</a></li>
+            <li><a href="script I.html">Intro to JavaScript</a></li>
+            <li><a href="script II.html">Element creation</a></li>
         </ul>
     </div>
-</body>
+    <footer>
+        <div id="footer">&copy; 2026 Harshita | All Rights Reserved</div>
+    </footer>
+    </body>
 </html>
- 

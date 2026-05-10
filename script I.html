@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<style>
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body{
+background-color:#f5f7fb;
+color:#333;
+}
+
+/* Header */
+header{
+    background:#0b1d3a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:30px;
+    letter-spacing:2px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+#footer{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        color: white;
+        background: #0b1d3a;
+        text-align: center;
+        padding: 10px;
+        clear: both;
+    }
+
+    #para{
+        border:#0b1d3a double 3px;
+        background: rgb(205, 230, 240);
+        margin: 10px 10px;
+        padding: 10px;
+        text-align: justify;
+        color: black;
+        font-size: 18px;
+    }
+
+/* Mobile Devices */
+@media (max-width: 600px){
+
+    header{
+        font-size:20px;
+        padding:15px;
+    }
+
+    #para{
+        font-size: 16px;
+    }
+
+    #footer{
+        margin-top: 10px;
+        font-size:14px;
+        padding:10px;
+    }
+}
+</style>
+<body>
+    <header>Welcome to JavaScript</header>
+    <script>
+    
+        document.write("<h2 style='background:lightblue; color:#0b1d3a; text-align:center;margin-top:20px '>Hello World</h2>")
+
+        /* alert ("Hello world")
+        var mycolor= prompt("Set background color","pink")
+        document.body.style.background= mycolor
+        var answer=confirm("want to close...?")
+            if(answer==true)
+            {
+              window.close()  
+            }
+            else{
+                alert("Window will not close since you had pressed cancel")
+            } */
+
+    </script>
+    <div id="para">
+    <p>JavaScript is a popular programming language used to make websites interactive and dynamic. It was created by Brendan Eich in 1995. JavaScript works with HTML and CSS. HTML creates the structure of a webpage, CSS adds design, and JavaScript adds functions like buttons, animations, forms, and sliders.
+
+JavaScript is a **case-sensitive** language, meaning `Name` and `name` are different. It is an **interpreted language**, so the browser reads and runs the code line by line using an interpreter.
+
+The standard version of JavaScript is called **ECMAScript (ECMA)**. The modern version, **ES6**, introduced features like `let`, `const`, arrow functions, and classes. The keyword `const` is used to create variables whose value cannot be changed later.
+
+Java and JavaScript are different programming languages. Java is mainly used for software and Android app development, while JavaScript is mainly used for web development. Java uses a compiler, whereas JavaScript uses an interpreter and runs mostly in web browsers.
+</p>
+</div>
+    <footer>
+        <div id="footer">&copy; 2026 Harshita | All Rights Reserved</div>
+    </footer>
+</body>
+</html>
