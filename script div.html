@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIV by JS</title>
+</head>
+<style>
+
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body{
+background-color:#f5f7fb;
+color:#333;
+}
+
+/* Header */
+header{
+    background:#0b1d3a;
+    color:white;
+    margin-bottom: 30px;
+    text-align:center;
+    padding:20px;
+    font-size:30px;
+    letter-spacing:2px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+footer{
+        width: 100%;
+        height: auto;
+        margin-top: 400px;
+        color: white;
+        background: #0b1d3a;
+        text-align: center;
+        padding: 10px;
+        clear: both;
+    }
+
+.box
+{
+    border: 4px  #0b1d3a inset;
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+    transition: 0.50s;
+    margin-left: 42%;
+    margin-top: 50px;
+    position: absolute;
+    //top: 100px;
+    //left: 20%;
+    text-align: center;
+}
+.mystyle{
+    //background: lavender;
+}
+
+/* Mobile Devices */
+@media (max-width: 600px){
+
+    header{
+        font-size:20px;
+        padding:15px;
+    }
+
+    footer{
+        margin-top: 400px;
+        font-size:14px;
+        padding:10px;
+    }
+
+    .box
+{
+    border: 4px  #0b1d3a inset;
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+    margin-left: 30%;
+    transition: 0.50s;
+    position: absolute;
+    //top: 150px;
+    //left: 20%;
+    text-align: center;
+}
+}
+
+
+</style>
+<body>
+    <header>Creating Div By JavaScript</header>
+    <script>
+        document.title="Create element"
+
+        var d = document.createElement("div");
+        document.body.appendChild(d);
+        d.className="box mystyle"
+        d.innerHTML="<button style='margin-top:5px; margin-right:180px; 'onclick=closedilog()'><h5>X</h5></button>"
+        d.innerHTML+="<h1>Typewriter</h1>"
+        d.innerHTML+="<hr color='black' size='2'/>"
+        d.innerHTML+="<img src='Images/typing.gif' style='width:100%;height:100%;'>"
+
+        function closedilog()
+        {
+            document.body.removeChild(d)
+        }
+        </script>
+    <footer>
+        &copy; 2026 Harshita | All Rights Reserved
+    </footer>
+</body>
+</html>
