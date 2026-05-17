@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body{
+background-color:#f5f7fb;
+color:#333;
+}
+
+/* Header */
+header{
+    background:#0b1d3a;
+    color:white;
+    margin-bottom: 30px;
+    text-align:center;
+    padding:20px;
+    font-size:30px;
+    letter-spacing:2px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+footer{
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+        color: white;
+        background: #0b1d3a;
+        text-align: center;
+        padding: 10px;
+        clear: both;
+    }
+
+/* Mobile Devices */
+@media (max-width: 600px){
+
+    header{
+        font-size:20px;
+        padding:15px;
+        
+    }
+
+    #footer{
+        font-size:14px;
+        padding:10px;
+    }
+}
+
+    </style>
+
+<body>
+    <header>Interactive Background Effects</header>
+    <script>
+        document.title= "Changing Colors"
+        var b = document.createElement("button")
+        document.body.appendChild(b)
+
+        b.innerHTML="Background Magic"
+        b.style.padding="15px 25px"
+        b.style.fontSize="20px"
+        b.style.background="#0b1d3a"
+        b.style.color="white"
+        b.style.border="none"
+        b.style.borderRadius="10px"
+        b.style.cursor="pointer"
+        b.style.margin="150px auto"
+        b.style.transition="0.50s"
+        b.style.display="block"
+    
+        function randomcolor()
+        {
+            var red= Math.round(Math.random()*255)
+            var green= Math.round(Math.random()*255)
+            var blue= Math.round(Math.random()*255)
+            var c = "rgb("+red+","+green+","+blue+")"
+            //alert(c)
+            document.body.style.background= c
+        }
+
+        b.onmouseover= function()
+        {
+            b.style.transform= "scale(1.2)"
+        }
+
+        b.onmouseout= function()
+        {
+            b.style.transform= "scale(1)"
+        }
+
+        b.onclick = randomcolor
+
+    //second button for reset
+
+        var back = document.createElement("button")
+        document.body.appendChild(back)
+
+back.innerHTML = "Reset Background"
+back.style.padding = "15px 25px"
+back.style.fontSize = "20px"
+back.style.background = "lightblue"
+back.style.color = "black"
+back.style.border = "2px solid black"
+back.style.borderRadius = "10px"
+back.style.cursor = "pointer"
+back.style.display = "block"
+back.style.margin = "40px auto"
+
+function normalbg()
+{
+    document.body.style.background = "#f5f7fb"
+}
+
+back.onclick = normalbg
+    </script>
+<footer>
+        <div id="footer">&copy; 2026 Harshita | All Rights Reserved</div>
+    </footer>
+    
+</body>
+</html>
