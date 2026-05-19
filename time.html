@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body{
+background-color:#f5f7fb;
+color:#333;
+}
+
+/* Header */
+header{
+    background:#0b1d3a;
+    color:white;
+    margin-bottom: 80px;
+    text-align:center;
+    padding:20px;
+    font-size:30px;
+    letter-spacing:2px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+footer{
+        width: 100%;
+        height: auto;
+        margin-top: 80px;
+        color: white;
+        background: #0b1d3a;
+        text-align: center;
+        padding: 10px;
+        clear: both;
+    }
+
+    #clock{
+    background: linear-gradient(45deg,#0b1d3a,#16396d);
+    color:white;
+    width: 400px;
+    padding: 25px;
+    margin: 80px auto 30px auto;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px #0b1d3a;
+    letter-spacing: 1px;  
+}
+
+/* Buttons */
+
+button{
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 20px;
+    background: linear-gradient(45deg,#16396d,#0b1d3a);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.50s;
+}
+
+button:hover{
+    background: #16396d;
+    transform: scale(1.1);
+}
+
+.buttonbox{
+    text-align: center;
+}
+
+
+/* Mobile Devices */
+@media (max-width: 600px){
+
+    header{
+        font-size:20px;
+        padding:15px;
+        
+    }
+
+    #footer{
+        font-size:14px;
+        padding:10px;
+    }
+
+    #clock{
+        width: 85%;
+        font-size: 24px;
+        padding: 20px;
+        margin-top: 60px;
+    }
+
+    button{
+        width: 150px;
+        font-size: 18px;
+        padding: 10px;
+    }
+}
+
+
+    </style>
+
+<body>
+    <header>Interactive Clock </header>
+    <div id="clock">Live Time Updates</div>
+
+    <div class="buttonbox">
+
+    <button onclick="st()">Start Clock</button>
+    <button onclick="sto()">Stop Clock</button>
+    </div>
+
+    <script>
+        function show()
+        {
+        var d= new Date()
+        var t = document.getElementById("clock")
+        t.innerHTML = d.toLocaleTimeString()
+        }
+
+        var timer 
+        function st()
+        {
+            timer = setInterval("show()",1000)
+        }
+        function sto()
+        {
+            clearInterval(timer)
+        }
+    </script>
+
+    <footer>
+        <div id="footer">&copy; 2026 Harshita | All Rights Reserved</div>
+    </footer>
+</body>
+</html>
