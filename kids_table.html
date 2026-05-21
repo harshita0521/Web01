@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table App </title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<style>
+
+    *{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    font-family:'Fredoka', sans-serif;
+}
+
+body{
+    background: linear-gradient(to bottom,#ffeaa7,#83c1fe);
+    text-align: center;
+    padding: 10px;
+    min-height: 100vh;
+}
+
+header{
+    background: linear-gradient(to right,#fba3c2,#a29bfe);
+    color: white;
+    padding: 18px;
+    border-radius: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+    border: 4px dashed white;
+    letter-spacing: 1px;
+}
+
+h1{
+    color: #2d3436;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.tablebox{
+    width: 90%;
+    background: white;
+    margin: 15px auto;
+    padding: 15px;
+    border-radius: 20px;
+    font-size: 24px;
+    color: #2d3436;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+    transition: 0.4s;
+}
+
+.tablebox:hover{
+    transform: scale(1.1);
+    background: #ffeaa7;
+}
+
+.emoji{
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.newbutton{
+    margin: 25px auto;
+    padding: 15px 25px;
+    font-size: 22px;
+    background:#6c5ce7;
+    color:white;
+    border:none;
+    border-radius:15px;
+    font-weight:bold;
+    box-shadow:0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.about-button{
+    padding:15px 20px;
+    font-size:24px;
+    border:4px dashed white;
+    border-radius:15px;
+    background: linear-gradient(to right,#fba3c2,#a29bfe);
+    color:white;
+    font-weight:bold;
+    margin-bottom:20px;
+    box-shadow:0px 4px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+</style>
+
+<body>
+    <header>Kids Math Learning</header>
+
+    <script>
+    var n=prompt("Enter a Number to Create Table","2")
+    document.write("<h1> 📚Table of ="+n+"</h1>")
+
+    for(var i=1; i<=10;i++){
+        document.write("<div class='tablebox'>" + "<div class='emoji'>🧸</div>" +n+" * "+i+" = "+n*i+"</div>")
+    }
+
+document.write("<button class='newbutton' onclick='location.reload()'>New Table</button>")
+
+    </script>
+
+<div class="about-button"
+<button onclick="window.location='kids_app_about.html'">
+📚 About App
+</button>
+</div>
+
+</body>
+</html>
