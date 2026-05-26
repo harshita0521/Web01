@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Colors</title>
+</head>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+/* Header */
+header{
+    background:#0b1d3a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:30px;
+    letter-spacing:2px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Color Box Div*/
+#colorbox{
+    width:80%;
+    height:350px;
+    margin:50px auto;
+    border-radius:25px;
+    background:white;
+    transition:1s;
+    box-shadow:0px 4px 10px rgba(0,0,0,0.3);
+    cursor:pointer;
+}
+
+/* Button */
+#b1{
+    display:block;
+    margin:20px auto;
+    padding:15px 25px;
+    font-size:22px;
+    border:none;
+    border-radius:15px;
+    background:#0b1d3a;
+    color:white;
+    cursor:pointer;
+    transition:0.5s;
+}
+
+/* Hover */
+#b1:hover{
+    transform:scale(1.05);
+}
+
+#b2{
+    display:block;
+    margin:20px auto;
+    padding:15px 25px;
+    font-size:22px;
+    border:none;
+    border-radius:15px;
+    background:crimson;
+    color:white;
+    cursor:pointer;
+    transition:0.5s;
+}
+
+#b2:hover{
+    transform:scale(1.05);
+}
+
+/* Footer */
+#footer{
+    width:100%;
+    margin-top:20px;
+    color:white;
+    background:#0b1d3a;
+    text-align:center;
+    padding:12px;
+    font-size:16px;
+}
+
+/* Mobile Devices */
+@media (max-width:600px){
+
+    header{
+        font-size:22px;
+        padding:15px;
+    }
+
+     #colorbox{
+        width:90%;
+        height:250px;
+    }
+
+    #b1{
+        font-size:18px;
+        padding:12px 20px;
+    }
+
+    #b2{
+        font-size:18px;
+        padding:12px 20px;
+    }
+
+    #footer{
+        font-size:14px;
+        padding:10px;
+    }
+}
+
+
+</style>
+
+<body>
+<body>
+
+<header>RGB Color Magic</header>
+
+
+<div id="colorbox"></div>
+
+
+<button id="b1" onclick="startcolor()">
+Start Color Effect
+</button>
+
+<button id="b2" onclick="stopcolor()">
+Stop Color Effect
+</button>
+
+<script>
+
+var t
+var r,g,b,c
+
+function show()
+{
+    r = Math.round(Math.random()*255)
+    g = Math.round(Math.random()*255)
+    b = Math.round(Math.random()*255)
+
+    c = `rgb(${r},${g},${b})`
+
+    // Only Div Color Changes
+    document.getElementById("colorbox").style.background = c
+
+    document.title = c
+}
+
+// Start Function
+function startcolor()
+{
+    t = setInterval(show,1000)
+}
+
+// Stop Function
+function stopcolor()
+{
+    clearInterval(t)
+}
+
+
+</script>
+
+<footer>
+    <div id="footer">
+        &copy; 2026 Harshita | All Rights Reserved
+    </div>
+</footer>
+
+</body>
+</body>
+</html>
