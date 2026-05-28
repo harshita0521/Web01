@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table by While Loop</title>
+</head>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+/* Header */
+header{
+    background:#0b1d3a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:30px;
+    letter-spacing:2px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Table Styling */
+table{
+    width:80%;
+    margin:50px auto;
+    background:white;
+    box-shadow:0px 4px 10px rgba(0,0,0,0.2);
+    border-radius:20px;
+    overflow:hidden;
+}
+
+/* Table Cells */
+td{
+    padding:15px;
+    border:1px solid #dcdcdc;
+}
+
+/* Input Box */
+input[type="text"]{
+    width:100%;
+    padding:6px;
+    border:none;
+    outline:none;
+    border-radius:5px;
+    background:#eff1f4;
+    font-size:18px;
+    text-align:center;
+    transition:0.3s;
+}
+
+
+
+/* Footer */
+#footer{
+    width:100%;
+    margin-top:20px;
+    color:white;
+    background:#0b1d3a;
+    text-align:center;
+    padding:12px;
+    font-size:16px;
+}
+
+/* Mobile Devices */
+@media (max-width:600px){
+
+    header{
+        font-size:22px;
+        padding:15px;
+    }
+
+    table{
+        width:95%;
+        margin:30px auto;
+    }
+
+    td{
+        padding:8px;
+    }
+
+    input[type="text"]{
+        padding:10px;
+        font-size:14px;
+    }
+
+    #footer{
+        font-size:14px;
+        padding:10px;
+    }
+}   
+
+</style>
+
+<body>
+
+<header>Working with While Loop</header>
+<table border="4" cellpadding="10">
+
+<script>
+    var row = prompt ("Enter Row Number to Create Table" , "5")
+    var col = prompt ("Enter Column Number to Create Table" , "5")
+    var c = 1
+
+ while(c<=row)
+ {
+    document.write("<tr>")
+        for(var i = 1; i<=col;i++)
+            {
+                document.write("<td><input type='text'></td>")
+            }
+
+            document.write("</tr>")
+
+            c++
+ }
+
+</script>
+</table>
+
+<footer>
+    <div id="footer">
+        &copy; 2026 Harshita | All Rights Reserved
+    </div>
+</footer>    
+</body>
+</html>

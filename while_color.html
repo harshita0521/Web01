@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette</title>
+</head>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+/* Header */
+header{
+    background:#0b1d3a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:30px;
+    letter-spacing:2px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Table */
+table{
+    margin:40px auto;
+    background:white;
+    padding:15px;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0px 4px 20px rgba(0,0,0,0.2);
+}
+
+/* Table Cells */
+td{
+    padding:4px;
+    border:none;
+}
+
+/* Color Buttons */
+button{
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:12px;
+    cursor:url('Images/brush.png'), auto;
+    transition:0.3s;
+    box-shadow:0px 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Hover Effect */
+button:hover{
+    transform:scale(1.10);
+}
+
+/* Footer */
+#footer{
+    width:100%;
+    margin-top:20px;
+    color:white;
+    background:#0b1d3a;
+    text-align:center;
+    padding:12px;
+    font-size:16px;
+}
+
+/* Mobile Devices */
+@media (max-width:600px){
+
+    header{
+        font-size:22px;
+        padding:15px;
+    }
+
+    table{
+        margin:25px auto;
+        padding:10px;
+    }
+
+    button{
+        width:28px;
+        height:28px;
+        border-radius:8px;
+    }
+
+    #footer{
+        font-size:14px;
+        padding:10px;
+    }
+}   
+
+</style>
+
+<body>
+
+<header>Paint Shade Collection</header>
+<table border="1" cellpadding="1">
+
+<script>
+    var row=10
+    var col=10
+    var c=1
+
+    while(c<=row){
+        document.write("<tr>")
+                for(var i = 1; i<=col; i++){
+                    var red= Math.round(Math.random()*255)
+                    var green= Math.round(Math.random()*255)
+                    var blue= Math.round(Math.random()*255)
+                    var mycolor= `rgb(${red},${green},${blue})`
+
+                    document.write("<td><button onclick='setcolor(this)' style='background:"+mycolor+"'></button></td>")
+                }
+
+        document.write("</tr>")
+
+        c++
+
+        function setcolor(d){
+            document.body.style.background= d.style.background
+        }
+    }
+</script>
+
+</table>
+
+
+<footer>
+    <div id="footer">
+        &copy; 2026 Harshita | All Rights Reserved
+    </div>
+</footer>    
+</body>
+</html>
