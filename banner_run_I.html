@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Banner Effect</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    text-align:center;
+}
+
+/* Header */
+header{
+    background:#0b1d3a;
+    color:white;
+    padding:20px;
+    font-size:30px;
+    font-weight:bold;
+    letter-spacing:2px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Banner Container */
+.banner{
+    position:relative;
+    width:700px;
+    height:550px;
+    margin:40px auto;
+}
+
+/* Images */
+.pic{
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    border-radius:20px;
+    object-fit:cover;
+    transition:2s;
+    box-shadow:0px 5px 20px rgba(0,0,0,0.3);
+}
+
+/* Footer */
+footer{
+    width:100%;
+    margin-top:30px;
+    color:white;
+    background:#0b1d3a;
+    text-align:center;
+    padding:12px;
+}
+
+/* Mobile */
+@media(max-width:600px){
+
+    header{
+        font-size:20px;
+        padding:15px;
+    }
+
+    .banner{
+        width:90%;
+        height:400px;
+    }
+
+    footer{
+        font-size:14px;
+        padding:10px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>Image Banner Effect</header>
+
+<div class="banner">
+
+    <img src="Images/f1.jpg" class="pic">
+    <img src="Images/f2.jpg" class="pic">
+    <img src="Images/f3.jpg" class="pic">
+    <img src="Images/f4.jpg" class="pic">
+
+</div>
+
+<script>
+
+// Finding all images
+
+var plist = document.getElementsByTagName("img");
+
+var f1 = plist[3];
+var f2 = plist[2];
+var f3 = plist[1];
+var f4 = plist[0];
+
+var c = 0;
+
+function runbanner()
+{
+    switch(c)
+    {
+        case 0:
+            f1.style.opacity = "0";
+            break;
+
+        case 1:
+            f2.style.opacity = "0";
+            break;
+
+        case 2:
+            f3.style.opacity = "0";
+            break;
+
+        case 3:
+            f4.style.opacity = "0";
+            break;
+
+        case 4:
+            f1.style.opacity = "1";
+            f2.style.opacity = "1";
+            f3.style.opacity = "1";
+            f4.style.opacity = "1";
+            c = -1;
+            break;
+    }
+
+    c++;
+
+    setTimeout(runbanner,2000);
+}
+
+runbanner();
+
+</script>
+
+<footer>
+    <div id="footer">
+        &copy; 2026 Harshita | All Rights Reserved
+    </div>
+</footer>
+
+</body>
+</html>

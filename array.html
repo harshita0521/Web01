@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array </title>
+</head>
+
+<style> 
+
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body{
+background-color:#f5f7fb;
+color:#333;
+}
+
+/* Header */
+header{
+    background:#0b1d3a;
+    color:white;
+    margin-bottom: 30px;
+    text-align:center;
+    padding:20px;
+    font-size:30px;
+    letter-spacing:2px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Images */
+.mystyle{
+    width:300px;
+    height:350px;
+    margin:35px;
+    border-radius:20px;
+    object-fit:cover;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    transition:0.4s;
+    cursor:pointer;
+}
+
+/* Hover Effect */
+.mystyle:hover{
+    transform:scale(1.05);
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+footer{
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+        color: white;
+        background: #0b1d3a;
+        text-align: center;
+        padding: 10px;
+        clear: both;
+    }
+
+/* Mobile Devices */
+@media (max-width: 600px){
+
+    header{
+        font-size:20px;
+        padding:15px;
+        
+    }
+
+    .mystyle{
+        width:90%;
+        max-width:320px;
+        height:300px;
+        margin:10px auto;
+        display:block;
+        margin-bottom: 25px;
+    }
+
+    #footer{
+        font-size:14px;
+        padding:10px;
+    }
+}
+
+    </style>
+
+<body>
+
+    <header>Array Image Collection</header>
+
+    <script>
+        var pic=["https://plus.unsplash.com/premium_photo-1775814102403-0cf5bdf1094e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","https://images.unsplash.com/photo-1780498253822-c431b41b6d90?q=80&w=390&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","https://images.unsplash.com/photo-1725399898959-feab9221069e?q=80&w=385&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","https://images.unsplash.com/photo-1780545311196-f8b507b08b94?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","https://images.unsplash.com/photo-1777836439057-f80dbde5703c?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","https://images.unsplash.com/photo-1779419171796-1aff900f9f60?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","https://images.unsplash.com/photo-1780583287735-8e4d680dd0ca?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","https://plus.unsplash.com/premium_photo-1767276732204-593807428632?q=80&w=440&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"]
+
+
+        for(var i = 0;i<pic.length;i++)
+    {
+        document.write("<img class='mystyle' src='"+pic[i]+"'>")
+
+    }
+    </script>
+
+    <footer>
+        <div id="footer">&copy; 2026 Harshita | All Rights Reserved</div>
+    </footer>
+</body>
+</html>

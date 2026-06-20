@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body{
+background-color:#f5f7fb;
+color:#333;
+}
+
+/* Header */
+header{
+    background:#0b1d3a;
+    color:white;
+    margin-bottom: 30px;
+    text-align:center;
+    padding:20px;
+    font-size:30px;
+    letter-spacing:2px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+footer{
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+        color: white;
+        background: #0b1d3a;
+        text-align: center;
+        padding: 10px;
+    }
+
+/* Mobile Devices */
+@media (max-width: 600px){
+
+    header{
+        font-size:20px;
+        padding:15px;
+        
+    }
+
+    #footer{
+        font-size:14px;
+        padding:10px;
+    }
+}
+</style>
+<body>
+  <header>Downloading File With Link</header>
+    <!--
+    <h1><a href="a href='Images/GUI.pdf'">Download File</a>
+    </h1>-->
+
+    <script>
+        /* Working with doWhileLoop */
+        // Post Tested Loop
+
+        var pw="72105"
+        var response;
+        var turn=0
+
+             
+            var turn = 0 
+             do
+             {
+                response = prompt("Enter Password to Download...")
+
+                     if(response===pw)
+                     {
+                           alert("✅Valid password")
+                        document.write("<h1><a href= 'Images/gui.pdf'> Download File</a></h1>")
+                        break;
+                     }
+
+                     if(turn>=3){
+                        alert("❎Access Denies...# turn are over")
+                     }
+
+                     turn++
+                    } while (turn<=3)
+
+    </script>
+
+    <footer>
+        <div id="footer">&copy; 2026 Harshita | All Rights Reserved</div>
+    </footer>
+</body>
+</html>
