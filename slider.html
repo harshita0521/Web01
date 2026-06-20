@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Slider</title>
+</head>
+
+<style>
+
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body{
+background-color:#f5f7fb;
+color:#333;
+}
+
+/* Header */
+header{
+    background:#0b1d3a;
+    color:white;
+    margin-bottom: 30px;
+    text-align:center;
+    padding:20px;
+    font-size:30px;
+    letter-spacing:2px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+    #mask{
+        width:90%;
+        max-width:1000px;
+        height:450px;
+        margin: 30px auto;
+        overflow: hidden;
+        border-radius: 20px;
+        border: 3px solid #0b1d3a;
+        box-shadow: 0px 4px 12px(0,0,0,0.2);
+        background: white;
+
+    }
+
+    /* Image Container */
+#box{
+    display:flex;
+    transition:0.4s;
+}
+
+.pic{
+    width:350px;
+    height:450px;
+    object-fit:cover;
+    flex-shrink:0;
+    transition:0.4s;
+}
+
+.pic:hover{
+    transform:scale(1.03);
+}
+
+
+#slider{
+    width:80%;
+    margin:30px auto;
+    display:block;
+    cursor:pointer;
+    background: #0b1d3a;
+}
+
+
+
+footer{
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+        color: white;
+        background: #0b1d3a;
+        text-align: center;
+        padding: 10px;
+        clear: both;
+    }
+
+/* Mobile Devices */
+@media (max-width: 600px){
+
+    header{
+        font-size:20px;
+        padding:15px;
+        
+    }
+
+    #mask{
+        width:95%;
+        height:300px;
+    }
+
+    .pic{
+        width:300px;
+        height:300px;
+    }
+
+    #slider{
+        width:90%;
+    }
+
+    #footer{
+        font-size:14px;
+        padding:10px;
+    }
+}
+
+    </style>
+
+<body>
+
+    <header>Interactive Image Slider</header>
+
+    <div id="mask">
+
+        <div id="box">
+            <img src="Images/f1.jpg" class="pic">
+            <img src="Images/f2.jpg" class="pic">
+            <img src="Images/f3.jpg" class="pic">
+            <img src="Images/f4.jpg" class="pic">
+            <img src="Images/f5.jpg" class="pic">
+            <img src="Images/f6.jpg" class="pic">
+            <img src="Images/f7.jpg" class="pic">
+            <img src="Images/f8.jpg" class="pic">
+        </div>
+
+    </div>
+
+    <input type="range" min="0" max="1800" value="0" id="slider" oninput="move()">
+
+    <script>
+        function move()
+        {
+            var slider=document.getElementById("slider");
+            var box= document.getElementById("box");
+            box.style.marginLeft = (-slider.value) + "px";
+        }
+    </script>
+
+
+    <footer>
+        <div id="footer">&copy; 2026 Harshita | All Rights Reserved</div>
+    </footer>
+</body>
+</html>

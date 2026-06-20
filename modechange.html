@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    :root{
+        --dark: #000000;
+        --light: #ffffff;
+        --tcolor: green;
+    }
+
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body{
+background-color:#f5f7fb;
+color:#333;
+min-height: 100vh;
+transition: 0.5s;
+}
+
+/* Header */
+header{
+    background:#0b1d3a;
+    color:white;
+    margin-bottom: 30px;
+    text-align:center;
+    padding:20px;
+    font-size:30px;
+    letter-spacing:2px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+#b{
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background: #a5aebd;
+    color:white;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: 0px 4px 12px(0,0,0,0.3);
+    transition: 0.4s;
+}
+
+#b:hover{
+    transform: scale(1.1);
+}
+
+.content{
+    width:80%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+    font-size:32px;
+}
+
+p{
+    font-size:18px;
+    line-height:1.6;
+    text-align:justify;
+    padding:0 10px;
+}
+
+footer{
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+        color: white;
+        background: #0b1d3a;
+        text-align: center;
+        padding: 10px;
+    }
+
+/* Mobile Devices */
+@media (max-width: 600px){
+
+    header{
+        font-size:20px;
+        padding:15px;
+        
+    }
+
+    #b{
+        width:40px;
+        height:40px;
+        font-size:20px;
+        top:70px;
+        right:10px;
+    }
+
+    .content{
+        width:92%;
+        padding:20px;
+        margin:25px auto;
+    }
+
+    h1{
+        font-size:24px;
+    }
+
+    p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    #footer{
+        font-size:14px;
+        padding:10px;
+    }
+}
+
+</style>
+
+<body>
+   <header>Theme Changer</header> 
+
+<button id="b">🌙</button>
+<script>
+    var b = document.getElementById("b")
+
+    b.onclick=function(){
+        if(b.innerHTML=="🌙")
+    {
+        b.innerHTML="☀️"
+        document.body.style.background="var(--dark)"
+        document.body.style.color="var(--light)"
+    }
+    else
+    {
+        b.innerHTML = "🌙"
+        document.body.style.background="var(--light)"
+        document.body.style.color="var(--dark)"
+    }
+    }
+</script>
+
+<div class="content">
+
+<h1>Infectious and Non-infectious Diseases</h1>
+<p>Diseases can be classified into infectious and non-infectious diseases. Infectious diseases are caused by microorganisms such as bacteria, viruses, fungi, and parasites. They can spread from one person to another through air, water, food, direct contact, or insect bites. Common examples are typhoid, tuberculosis, malaria, influenza, and COVID-19. These diseases can often be prevented through vaccination, good hygiene, and proper sanitation. Non-infectious diseases, on the other hand, are not caused by microorganisms and do not spread from person to person. They may result from genetic factors, lifestyle habits, nutritional deficiencies, environmental conditions, or aging. Examples include diabetes, cancer, hypertension, heart disease, and asthma. Prevention of non-infectious diseases mainly involves a healthy diet, regular exercise, avoiding tobacco and alcohol, and regular health check-ups. Both infectious and non-infectious diseases affect human health and can reduce the quality of life. Therefore, awareness, early diagnosis, and proper treatment are important for controlling and preventing these diseases.</p>
+
+</div>
+
+   <footer>
+        <div id="footer">&copy; 2026 Harshita | All Rights Reserved</div>
+    </footer>
+</body>
+</html>

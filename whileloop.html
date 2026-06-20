@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body{
+background-color:#f5f7fb;
+color:#333;
+}
+
+/* Header */
+header{
+    background:#0b1d3a;
+    color:white;
+    margin-bottom: 30px;
+    text-align:center;
+    padding:20px;
+    font-size:30px;
+    letter-spacing:2px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+h1{
+    text-align: center;
+    margin: 30px auto;
+}
+
+#pic{
+    width: 70%;
+    max-width: 700px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#pic:hover{
+    transform: scale(1.05);
+}
+
+footer{
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+        color: white;
+        background: #0b1d3a;
+        text-align: center;
+        padding: 10px;
+    }
+
+/* Mobile Devices */
+@media (max-width: 600px){
+
+    header{
+        font-size:20px;
+        padding:15px;
+        
+    }
+
+    #pic{
+        width:90%;
+        border-radius:15px;
+    }
+
+    #footer{
+        font-size:14px;
+        padding:10px;
+    }
+}
+
+</style>
+
+<body>
+   <header id="m">Image of the Day - </header> 
+   <h1><img id="pic" src="">
+</h1>
+
+<script>
+    //using swith statement
+    //syntax
+
+    var d=new Date();
+    var m= document.getElementById("m")
+    var pic= document.getElementById("pic")
+    pic.src="Images/h7.jpg"
+    var today = d.getDay()  
+
+    switch(today)
+    {
+        case 1:
+        m.innerHTML+="Monday"
+        pic.src="Images/h1.jpg"
+
+        break;
+
+        case 2:
+        m.innerHTML+="Tuesday"
+        pic.src="Images/h2.jpg"
+
+        break;
+
+        case 3:
+        m.innerHTML+="Wednesday"
+        pic.src="Images/h3.jpg"
+
+        break;
+
+        case 4:
+        m.innerHTML+="Thursday"
+        pic.src="Images/h4.jpg"
+
+        break;
+
+        case 5:
+        m.innerHTML+="Friday"
+        pic.src="Images/h5.jpg"
+
+        break;
+
+        case 6:
+        m.innerHTML+="Saturday"
+        pic.src="Images/h6.jpg"
+
+        break;
+
+        case 0:
+        m.innerHTML+="Sunday"
+        pic.src="Images/h7.jpg"
+        break;
+        default: 
+        pic.src="Images/h1.jpg"
+    }
+</script>
+
+
+   <footer>
+        <div id="footer">&copy; 2026 Harshita | All Rights Reserved</div>
+    </footer>
+</body>
+</html>

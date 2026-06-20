@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Slider Using Radio Buttons</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+}
+
+/* Header */
+header{
+    background:#0b1d3a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:30px;
+    font-weight:bold;
+    letter-spacing:2px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    margin-bottom:30px;
+}
+
+/* Banner */
+.banner{
+    width:700px;
+    height:600px;
+    margin:auto;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0px 5px 20px rgba(0,0,0,0.3);
+}
+
+.banner img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* Radio Buttons */
+.radios{
+    text-align:center;
+    margin-top:20px;
+}
+
+.radios input[type="radio"]{
+    width:20px;
+    height:20px;
+    margin:0 10px;
+    cursor:pointer;
+}
+
+/* Footer */
+footer{
+    width:100%;
+    margin-top:30px;
+    background:#0b1d3a;
+    color:white;
+    text-align:center;
+    padding:12px;
+}
+
+/* Mobile */
+@media(max-width:600px){
+
+    header{
+        font-size:20px;
+        padding:15px;
+    }
+
+    .banner{
+        width:90%;
+        height:400px;
+    }
+
+    .radios input[type="radio"]{
+        width:16px;
+        height:16px;
+        margin:0 6px;
+    }
+
+    footer{
+        font-size:14px;
+        padding:10px;
+    }
+}
+
+</style>
+</head>
+
+<body onload="show()">
+
+<header>Automatic Radio Banner Slider</header>
+
+<div class="banner">
+    <img src="Images/p1.jpg" id="p">
+</div>
+
+<div class="radios">
+    <input type="radio" name="slide">
+    <input type="radio" name="slide">
+    <input type="radio" name="slide">
+    <input type="radio" name="slide">
+</div>
+
+<script>
+
+var p = document.getElementById("p");
+var s = document.getElementsByName("slide");
+
+var c = 1;
+var t;
+
+/* Automatic Slider */
+function show()
+{
+    p.src = "Images/p" + c + ".jpg";
+
+    s[c-1].checked = true;
+
+    c++;
+
+    if(c > 4)
+    {
+        c = 1;
+    }
+
+    t = setTimeout(show,6000);
+}
+
+/* Radio 1 */
+s[0].addEventListener("click",function()
+{
+    clearTimeout(t);
+
+    c = 1;
+    p.src = "Images/p1.jpg";
+
+    t = setTimeout(show,6000);
+});
+
+/* Radio 2 */
+s[1].addEventListener("click",function()
+{
+    clearTimeout(t);
+
+    c = 2;
+    p.src = "Images/p2.jpg";
+
+    t = setTimeout(show,6000);
+});
+
+/* Radio 3 */
+s[2].addEventListener("click",function()
+{
+    clearTimeout(t);
+
+    c = 3;
+    p.src = "Images/p3.jpg";
+
+    t = setTimeout(show,6000);
+});
+
+/* Radio 4 */
+s[3].addEventListener("click",function()
+{
+    clearTimeout(t);
+
+    c = 4;
+    p.src = "Images/p4.jpg";
+
+    t = setTimeout(show,6000);
+});
+
+</script>
+
+<footer>
+    <div id="footer">
+        &copy; 2026 Harshita | All Rights Reserved
+    </div>
+</footer>
+
+</body>
+</html>
