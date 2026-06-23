@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+</head>
+<style>
+
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body{
+background-color:#f5f7fb;
+color:#333;
+}
+
+/* Header */
+header{
+    background:#0b1d3a;
+    color:white;
+    margin-bottom: 30px;
+    text-align:center;
+    padding:20px;
+    font-size:30px;
+    letter-spacing:2px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+footer{
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+        color: white;
+        background: #0b1d3a;
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* Section */
+.section{
+padding:60px 50px;
+}
+
+/* Profile Image */
+.profile{
+width:350px;
+border-radius:22%;
+margin-top:30px;
+margin-bottom: 50px;
+box-shadow: 0px 5px 12px rgb(0,0,0,0.4);
+}
+
+/* Container for desktop*/
+.section__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+/* Subtitle */
+.subtitle{
+color:#777;
+letter-spacing:2px;
+margin-bottom:10px;
+}
+
+/* Title */
+.title{
+font-size:48px;
+font-weight:bold;
+margin-bottom:20px;
+}
+
+.title span{
+color:#0077ff;
+}
+
+/* Description */
+.description{
+max-width:600px;
+line-height:1.6;
+color:#555;
+margin-bottom:30px;
+}
+
+
+/* Mobile Devices */
+@media (max-width: 600px){
+
+    header{
+        font-size:20px;
+        padding:15px;
+        
+    }
+
+    #footer{
+        font-size:14px;
+        padding:10px;
+    }
+
+    /* Container for mobile*/
+.section__container{
+    flex-direction: column-reverse;
+    text-align: center;
+}
+
+/* Profile Image */
+.profile{
+width:300px;
+border-radius:22%;
+margin-top:30px;
+margin-bottom: 50px;
+box-shadow: 0px 5px 12px rgb(0,0,0,0.4);
+}
+
+}
+
+
+
+</style>
+<body>
+    <header>ABOUT ME</header>
+
+    <section class="section">
+        <div class="section__container">
+            <div class="content">
+                <p class="subtitle">HELLO</p>
+                <h1 class="title">
+                    I'm <span>Harshita<br>a </span>UI UX Designer
+                </h1>
+                <p class="description">
+                    Welcome to my web page, I'm a passionate and creative UI/UX design learner with a strong interest in graphic designing and web development. Currently, I am improving my skills in HTML, CSS, JavaScript, and modern design principles while working on different projects and practice tasks. I enjoy creating clean, responsive, and user-friendly websites that provide a better user expereince. I believe in continuous learning, creativity, and problem-solving, and my goal is to become a skilled UI/UX designer with strong front-end and back-end development skills. Through my work, I aim to create visually appealing and meaningful digital experiences that are both functional and engaging.
+                    Apart from designing and coding, I enjoy exploring new ideas, learning modern technologies, and constantly challenging myself to grow both creatively and professionaly.
+                </p>
+                </div>
+                
+                <div>
+                    <img src="Images/me.jpeg" class="profile" alt="profile">
+                </div>
+             </div>
+        
+    </section>
+
+    <footer>
+        <div id="footer">&copy; 2026 Harshita | All Rights Reserved</div>
+    </footer>
+</body>
+</html>

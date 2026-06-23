@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+</head>
+
+<style>
+
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body{
+background-color:#f5f7fb;
+color:#333;
+}
+
+/* Header */
+header{
+    background:#0b1d3a;
+    color:white;
+    margin-bottom: 30px;
+    text-align:center;
+    padding:20px;
+    font-size:30px;
+    letter-spacing:2px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.contact{
+    width: 80%;
+    max-width:700px;
+    background: white;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow:0px 5px 20px rgba(0,0,0,.2) ;
+}
+
+.contact h1{
+    color: #0b1d3a;
+    margin-bottom: 20px;
+}
+
+.contact p{
+    color:rgb(71, 71, 71);
+    line-height: 1.6;
+}
+
+input,textarea{
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
+    background: #f2f4f8;
+    border-radius: 15px;
+    font-size: 17px;
+    outline: none;
+}
+
+textarea{
+    height: 150px;
+    resize: none;
+}
+
+button{
+    width:100%;
+    margin-top: 25px;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    background: #0b1d3a;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+button:hover{
+background: #14205d;
+}
+
+.info{
+    margin-top: 40px;
+}
+
+.info h3{
+    color: #0b1d3a;
+    margin-top: 20px;
+}
+
+footer{
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+        color: white;
+        background: #0b1d3a;
+        text-align: center;
+        padding: 10px;
+    }
+
+/* Mobile Devices */
+@media (max-width: 600px){
+
+    header{
+        font-size:20px;
+        padding:15px;
+    }
+
+    .contact{
+        width: 95%;
+        margin: 25px auto;
+        padding: 25px;
+        border-radius: 20px;
+    }
+
+    .contact h1{
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .contact p{
+        font-size:15px;
+        line-height:1.7;
+        text-align:center;
+    }
+
+    input,
+    textarea{
+        padding:12px;
+        font-size:15px;
+        border-radius:12px;
+    }
+
+    textarea{
+        height:120px;
+    }
+
+    button{
+        padding:13px;
+        font-size:18px;
+        border-radius:40px;
+    }
+
+    .info{
+        margin-top:30px;
+        text-align:center;
+    }
+
+    .info h3{
+        font-size:18px;
+        margin-top:15px;
+    }
+
+    .info p{
+        font-size:14px;
+    }
+
+
+    #footer{
+        font-size:14px;
+        padding:10px;
+    }
+}
+</style>
+
+<body>
+    
+<header>CONTACT ME</header>
+
+<div class="contact">
+    <h1>Get In Touch</h1>
+    <p>I am always open to new opportunities, collaborations, and creative projects. Feel free to reach out if you have any questions or would like to work together. I would be happy to connect with you.</p>
+
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea placeholder="Your Message"></textarea>
+    <button>Send Message</button>
+    <div class="info">
+        <h3>📧 Email</h3>
+        <p>harshita721721@gmail.com</p>
+
+        <h3>📍 Location</h3>
+        <p>New Delhi,India</p>
+    </div>
+
+</div>
+<footer>
+        <div id="footer">&copy; 2026 Harshita | All Rights Reserved</div>
+    </footer>
+
+</body>
+</html>
