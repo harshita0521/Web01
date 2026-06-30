@@ -8,7 +8,7 @@
 
 <style>
 
-    *{
+    *{ 
 margin:0;
 padding:0;
 box-sizing:border-box;
@@ -53,6 +53,41 @@ header{
     cursor:crosshair;
 }
 
+/* Controls */
+
+.controls{
+    width:90%;
+    max-width:900px;
+    margin:25px auto;
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0px 5px 15px rgba(0,0,0,.2);
+}
+
+.controls h2{
+    text-align:center;
+    color:#0b1d3a;
+    margin-bottom:15px;
+}
+
+.controls table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.controls th{
+    background:#0b1d3a;
+    color:white;
+    padding:12px;
+}
+
+.controls td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:center;
+}
+
 footer{
         width: 100%;
         height: auto;
@@ -79,6 +114,21 @@ footer{
         border-radius:12px;
     }
 
+.controls{
+    width:95%;
+    padding:15px;
+}
+
+.controls h2{
+    font-size:20px;
+}
+
+.controls th,
+.controls td{
+    font-size:14px;
+    padding:8px;
+}
+
     #footer{
         font-size:14px;
         padding:10px;
@@ -89,7 +139,47 @@ footer{
 <body>
     <header>Keyboard Activity</header>
 
-    <canvas id="mycan" style="background: bisque;" width="600" height="600"></canvas>
+    <canvas id="mycan" style="background: #f5f7fb;" width="600" height="600"></canvas>
+
+<div class="controls">
+
+<h2>Keyboard Controls</h2>
+
+<table>
+
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+
+<tr>
+<td>R</td>
+<td>Increase Circle Size</td>
+</tr>
+
+<tr>
+<td>T</td>
+<td>Decrease Circle Size</td>
+</tr>
+
+<tr>
+<td>Q</td>
+<td>Clear Canvas</td>
+</tr>
+
+<tr>
+<td>Mouse Click</td>
+<td>Start / Stop Drawing</td>
+</tr>
+
+<tr>
+<td>Mouse Move</td>
+<td>Draw Random Color Circles</td>
+</tr>
+
+</table>
+
+</div>
 
     <script>
         var c = document.getElementById("mycan");
@@ -99,6 +189,7 @@ footer{
         c.width = c.offsetWidth;
         c.height = c.offsetHeight;
         var red,green,blue,drawcolor
+        var drawmode = false
 
         function f1(event)
         {
@@ -122,32 +213,45 @@ footer{
                     break;
 
                     case "q":
-                        d.clearRect(0,0,window.innerWidth,window.innerHeight)
+                       d.clearRect(0,0,c.width,c.height);
 
                     break;    
             }
         }
 
         function draw(event)
+{
+    if(drawmode == false)
+    {
+        return;
+    }
+
+    var x = event.pageX;
+    var y = event.pageY;
+
+    red = Math.round(Math.random()*255);
+    green = Math.round(Math.random()*255);
+    blue = Math.round(Math.random()*255);
+
+    drawcolor = "rgb("+red+","+green+","+blue+")";
+
+    d.beginPath();
+    d.arc(x,y,r,0,2*Math.PI);
+    d.fillStyle = drawcolor;
+    d.fill();
+    d.stroke();
+}
+
+        function f2()
         {
-            //document.title="x ="+event.pageX+" y ="+event.pageY
-            var x = event.pageX
-            var y = event.pageY
-            red = Math.round(Math.random()*255)
-            green = Math.round(Math.random()*255)
-            blue = Math.round(Math.random()*255)
+            drawmode = (!drawmode)?true:false
 
-            drawcolor = "rgb("+red+" , "+green+" , "+blue+")"
-
-            d.beginPath();
-            d.arc(x,y,r,0,2*Math.PI);
-            d.fillStyle = drawcolor
-            d.fill()
-            d.stroke();
+            //document.title = drawmode
         }
 
         document.addEventListener("keydown",f1)
-        document.addEventListener("mousemove",draw)
+        c.addEventListener("click",f2)
+       c.addEventListener("mousemove",draw)
 
     </script>
 
