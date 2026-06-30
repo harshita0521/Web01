@@ -175,6 +175,7 @@ box-shadow: 0px 5px 12px rgb(0,0,0,0.4);
 margin-bottom: 10px;
 margin-left:20px;
 text-align: center;
+font-size: 20px;
 }
 
 .footer ul{
@@ -189,8 +190,14 @@ text-align: center;
     text-align: center;
 }
 
+.footer ul li a{
+     text-decoration: none;
+    color: #ffffff;
+}
+
 .footer ul li a:hover{
 color: #60a5fa;
+
 }
 
 .footer-right p{
