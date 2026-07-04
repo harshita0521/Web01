@@ -185,7 +185,7 @@ footer{
 </style>
 
 <body>
-    <header>Keyboard Activity (Circle)</header>
+    <header>Keyboard Activity (Rectangle)</header>
 
     <div class="palette">
 
@@ -210,12 +210,12 @@ footer{
 
 <tr>
 <td>R</td>
-<td>Increase Circle Size</td>
+<td>Increase Rectangle Size</td>
 </tr>
 
 <tr>
 <td>T</td>
-<td>Decrease Circle Size</td>
+<td>Decrease Rectangle Size</td>
 </tr>
 
 <tr>
@@ -230,7 +230,7 @@ footer{
 
 <tr>
 <td>Mouse Move</td>
-<td>Draw Circles</td>
+<td>Draw Rectangle</td>
 </tr>
 
 </table>
@@ -287,7 +287,7 @@ footer{
     var y = event.pageY;
 
     d.beginPath();
-    d.arc(x,y,r,0,2*Math.PI);
+    d.rect(x,y,r,r);
 
     d.fillStyle = picker.value;
 

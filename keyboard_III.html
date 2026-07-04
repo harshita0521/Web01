@@ -185,7 +185,7 @@ footer{
 </style>
 
 <body>
-    <header>Keyboard Activity (Circle)</header>
+    <header>Keyboard Activity (Line)</header>
 
     <div class="palette">
 
@@ -210,12 +210,12 @@ footer{
 
 <tr>
 <td>R</td>
-<td>Increase Circle Size</td>
+<td>Increase Line Size</td>
 </tr>
 
 <tr>
 <td>T</td>
-<td>Decrease Circle Size</td>
+<td>Decrease Line Size</td>
 </tr>
 
 <tr>
@@ -230,7 +230,7 @@ footer{
 
 <tr>
 <td>Mouse Move</td>
-<td>Draw Circles</td>
+<td>Draw Line</td>
 </tr>
 
 </table>
@@ -287,12 +287,13 @@ footer{
     var y = event.pageY;
 
     d.beginPath();
-    d.arc(x,y,r,0,2*Math.PI);
+    d.moveTo(x,y)
+    d.lineTo(Math.random()*1200,Math.random()*1200);
 
     d.fillStyle = picker.value;
 
     d.fill();
-    //d.stroke();
+    d.stroke();
 }
 
         function f2()
