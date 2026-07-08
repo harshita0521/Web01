@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body{
+background-color:#f5f7fb;
+color:#333;
+}
+
+/* Header */
+header{
+    background:#0b1d3a;
+    color:white;
+    
+    text-align:center;
+    padding:20px;
+    font-size:30px;
+    letter-spacing:2px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+#mycan{
+    display:block;
+    width:100%;
+    height:100%;
+    background:black;
+}
+
+footer{
+        width: 100%;
+        height: auto;
+        
+        color: white;
+        background: #0b1d3a;
+        text-align: center;
+        padding: 10px;
+    }
+
+/* Mobile Devices */
+@media (max-width: 600px){
+
+    header{
+        font-size:20px;
+        padding:15px;
+        
+    }
+
+    #mycan{
+    width:100%;
+}
+
+    #footer{
+        font-size:14px;
+        padding:10px;
+    }
+}
+</style>
+<body>
+  <header>Random Shape Generator</header>
+
+  <canvas id="mycan" style="background: rgb(254, 252, 252)";></canvas> 
+
+  <script>
+    var c = document.getElementById("mycan");
+    var k;
+    var r = 10
+    var d = c.getContext("2d");
+    c.width = window.innerWidth;
+    c.height = window.innerHeight;
+    var red, green, blue, drawcolor = "red";
+    function pixel()
+    {
+        var x = Math.round(Math.random()*window.innerWidth)
+        var y = Math.round(Math.random()*window.innerHeight)
+
+        red = Math.round(Math.random()*255)
+        green = Math.round(Math.random()*255)
+        blue = Math.round(Math.random()*255)
+
+        drawcolor = "rgb("+red+","+green+","+blue+")"
+        d.beginPath();
+
+        d.arc(x, y, Math.random()*27, 0, 2*Math.PI);
+        d.fillStyle = drawcolor
+
+        d.fill()
+        document.title = x
+    }
+        setInterval("pixel()",10)
+    
+  </script>
+
+   <footer>
+        <div id="footer">&copy; 2026 Harshita | All Rights Reserved</div>
+    </footer> 
+</body>
+</html>
