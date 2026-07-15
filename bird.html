@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bird Game</title>
+</head>
+
+<style>
+   *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body{
+background:black;
+overflow: hidden;
+}
+
+/* Background */
+
+#back{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-1;
+}
+
+/* Bird */
+
+.box{
+    width:110px;
+    position:absolute;
+    top:10px;
+    left:10px;
+    z-index:100;
+    transition:0.08s linear;
+}
+
+
+/* Instructions */
+
+.controls{
+    position:absolute;
+    top:20px;
+    right:20px;
+    width:260px;
+    background:rgba(0,0,0,0.65);
+    color:white;
+    padding:18px;
+    border-radius:15px;
+    backdrop-filter:blur(5px);
+    box-shadow:0 5px 20px rgba(0,0,0,.4);
+    z-index:200;
+}
+
+.controls h2{
+    text-align:center;
+    margin-bottom:12px;
+    color:#ffd43b;
+}
+
+.controls table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.controls th{
+    background:#1b3d6d;
+    padding:8px;
+}
+
+.controls td{
+    padding:8px;
+    border-bottom:1px solid rgba(255,255,255,.2);
+    text-align:center;
+}
+
+
+/* Mobile Devices */
+@media (max-width: 600px)
+{
+
+
+.box{
+    width:80px;
+}
+
+.controls{
+    width:92%;
+    left:50%;
+    transform:translateX(-50%);
+    top:auto;
+    bottom:15px;
+    right:auto;
+    padding:12px;
+}
+
+.controls h2{
+    font-size:18px;
+}
+
+.controls th,
+.controls td{
+    font-size:13px;
+    padding:6px;
+}
+}
+
+
+</style>
+
+<body>
+    
+    <div class="controls">
+
+<h2>Controls</h2>
+
+<table>
+
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+
+<tr>
+<td>⬅️</td>
+<td>Move Left</td>
+</tr>
+
+<tr>
+<td>➡️</td>
+<td>Move Right</td>
+</tr>
+
+<tr>
+<td>⬆️</td>
+<td>Move Up</td>
+</tr>
+
+<tr>
+<td>⬇️</td>
+<td>Move Down</td>
+</tr>
+
+<tr>
+<td>+</td>
+<td>Increase Speed</td>
+</tr>
+
+<tr>
+<td>-</td>
+<td>Decrease Speed</td>
+</tr>
+
+</table>
+
+</div>
+    <img src = "Images/background.jpg" id="back">
+    <div id="box"></div>
+    
+    <script>
+        var b = new Image()
+        b.src="Images/fly.gif"
+        b.className = "box"
+
+        var L = 10
+        var U = 10
+        var speed = 5
+
+        document.body.appendChild(b);
+        var back = document.getElementById("back")
+        function f1(event)
+        {
+            var k = event.key
+            document.title = k
+            //alert(event.keyCode)
+            switch(k)
+            {
+                case "ArrowLeft":
+                b.style.transform = "rotateY(180deg)"
+                if(L>10)
+            {
+                L-=speed
+                b.style.left = L+"px"
+                back.style.left=`-${L}px`
+            }
+
+            break;
+            case "ArrowRight":
+            if(L<=window.innerWidth-130)
+            {
+                b.style.transform="rotate(0deg)"
+                L+=speed
+                b.style.left = L+"px"
+                back.style.left=`${-L}px`
+            }
+
+            break;
+            case "ArrowUp":
+                if(U>0)
+            {
+                U-=speed
+                b.style.top = U+"px"
+                back.style.top=`-${U}px`
+            }
+
+            break;
+            case "ArrowDown":
+                if(U<=window.innerWidth-100)
+            {
+                U+=speed
+                b.style.top = U+"px"
+                back.style.top=`-${U}px`
+            }
+            break;
+
+            case "+":
+                speed=(speed<20)?speed+=2:speed
+                document.title = speed
+                    break;
+                    case "-":
+                        speed=(speed>2)?speed-=2:speed
+                        document.title = speed
+                        break;
+
+            }
+            document.title = L+""+R
+        }
+        document.addEventListener("keydown",f1)
+    </script>
+
+</body>
+</html>
