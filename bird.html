@@ -39,7 +39,7 @@ overflow: hidden;
 /* Bird */
 
 .box{
-    width:110px;
+    width:170px;
     position:absolute;
     top:10px;
     left:10px;
@@ -93,7 +93,7 @@ overflow: hidden;
 
 
 .box{
-    width:80px;
+    width:120px;
 }
 
 .controls{
@@ -166,12 +166,12 @@ overflow: hidden;
 </table>
 
 </div>
-    <img src = "Images/background.jpg" id="back">
+    <img src = "https://i.pinimg.com/736x/8b/44/79/8b4479eb94720e71cf2baae75d3ec318.jpg" id="back">
     <div id="box"></div>
     
     <script>
         var b = new Image()
-        b.src="Images/fly.gif"
+        b.src="https://i.pinimg.com/originals/29/0a/94/290a942e8eb39df6d18842446efc56ff.gif"
         b.className = "box"
 
         var L = 10
@@ -193,7 +193,7 @@ overflow: hidden;
             {
                 L-=speed
                 b.style.left = L+"px"
-                back.style.left=`-${L}px`
+                //back.style.left=`-${L}px`
             }
 
             break;
@@ -203,7 +203,7 @@ overflow: hidden;
                 b.style.transform="rotate(0deg)"
                 L+=speed
                 b.style.left = L+"px"
-                back.style.left=`${-L}px`
+               // back.style.left=`${-L}px`
             }
 
             break;
@@ -212,7 +212,7 @@ overflow: hidden;
             {
                 U-=speed
                 b.style.top = U+"px"
-                back.style.top=`-${U}px`
+                //back.style.top=`-${U}px`
             }
 
             break;
@@ -221,7 +221,7 @@ overflow: hidden;
             {
                 U+=speed
                 b.style.top = U+"px"
-                back.style.top=`-${U}px`
+                //back.style.top=`-${U}px`
             }
             break;
 
