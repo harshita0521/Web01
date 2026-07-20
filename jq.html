@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+
+</head>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body{
+background-color:#f5f7fb;
+cursor:pointer;
+;
+}
+
+/* Header */
+header{
+    background:#0b1d3a;
+    color:white;
+    margin-bottom: 30px;
+    text-align:center;
+    padding:20px;
+    font-size:30px;
+    letter-spacing:2px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.gallery{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin:30px;
+}
+
+img{
+    width:300px;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+    box-shadow:0 6px 15px rgba(0,0,0,.2);
+    transition:.5s;
+}
+
+img:hover{
+    transform:scale(1.05);
+}
+
+button{
+    display: block;
+    margin: 30px auto;
+    padding: 12px 30px;
+    font-size: 18px;
+    background: #0b1d3a;
+    color: white;
+    border:none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 2s;
+}
+
+button:hover{
+    background: #1f4980;
+    transform: translateY(-2px);
+}
+
+h1{
+    text-align: center;
+    margin: 20px 0px;
+    color: #0b1d3a;
+}
+
+h2{
+    text-align: center;
+    margin: 20px 0px;
+    color: #0b1d3a;
+}
+
+.text{
+    width: 85%;
+    margin:25px auto;
+    line-height: 1.6;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,.2);
+    text-align: justify;
+}
+
+footer{
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+        color: white;
+        background: #0b1d3a;
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* Mobile Devices */
+@media (max-width: 600px){
+
+    header{
+        font-size:20px;
+        padding:15px;
+        
+    }
+
+    img{
+    width:90%;
+    height:220px;
+}
+
+button{
+    width:90%;
+    font-size:16px;
+}
+
+.text{
+    width:94%;
+    padding:15px;
+    font-size:15px;
+}
+
+
+    #footer{
+        font-size:14px;
+        padding:10px;
+       
+    }
+}
+</style>
+
+<body>
+<header>jQuery Events Demo</header>
+
+<div class="gallery">
+
+<img src="https://i.pinimg.com/736x/0a/de/f6/0adef65bd60af86773e5fdbff7218d4c.jpg">
+
+<img src="https://i.pinimg.com/736x/24/6f/55/246f55c9b7a8adc3c586bb9ccfae01f6.jpg">
+
+</div>
+
+<button id="b1">Show/Hide (h1)</button>
+<h1 id="my">Introduction to jQuery</h1>
+<h2>About jQuery</h2>
+   <p class="text">
+    jQuery is a lightweight, "write less, do more", JavaScript library.
+
+The purpose of jQuery is to make it much easier to use JavaScript on your website.
+jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code.
+jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.
+
+The jQuery team knows all about cross-browser issues, and they have written this knowledge into the jQuery library. jQuery will run exactly the same in all major browsers.
+   </p> 
+
+   <p class="text">
+    jQuery is a fast, small, and feature-rich JavaScript library designed to simplify HTML DOM tree traversal and manipulation, event handling, CSS animation, and Ajax interactions. It operates under the philosophy of "write less, do more," allowing web developers to achieve complex client-side functionalities with significantly fewer lines of code than native JavaScript. By providing an easy-to-use API that works seamlessly across a multitude of browsers, jQuery eliminates cross-browser inconsistencies and has historically been a foundational tool in modern web development.
+
+    <p class="text">
+        jQuery is strictly a frontend technology. 
+
+
+It is a fast, small, and lightweight client-side JavaScript library designed to run directly inside a user's web browser. It does not have access to server-side resources, databases, or cloud storage, making it completely incapable of handling backend operations. 
+    </p>
+   </p>
+
+<script>
+    $(document).ready(function()
+{
+    $("#b1").click(function(){
+        $("#my").toggle("fast")
+    });
+
+    $(".text").mouseover(function(){
+    $(this).css({
+        "transition":"2s",
+        "color":"#0b1d3a",
+        "background":"aquamarine",
+        "border-radius":"20px",
+        "box-shadow":"0px 4px 10px rgba(0,0,0,0.3)"
+    });
+});
+
+$(".text").mouseout(function(){
+    $(this).css({
+        "transition":"2s",
+        "color":"#000000",
+        "background":"#ffffff",
+        "border-radius":"15px",
+        "box-shadow":"0px 4px 15px rgba(0,0,0,0.3)"
+    });
+});
+})
+</script>
+
+<footer>
+    <div id="footer">&copy; 2026 Harshita | All Rights Reserved</div>
+</footer> 
+</body>
+</html>
