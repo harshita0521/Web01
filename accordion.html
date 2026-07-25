@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Armed Forces Accordion</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+</head>
+
+<style>
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#FF9933,#ffffff,#138808);
+    padding:20px;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    background:white;
+    border-radius:15px;
+    box-shadow: 0px 0px 20px gray;
+    overflow:hidden;
+}
+
+h1{
+    text-align: center;
+    padding: 20px;
+    background: #000080;
+    color:white;
+}
+
+.box{
+margin:15px;
+}
+
+.head{
+    background: #0b3d91;
+    color: white;
+    padding: 18px;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.head:hover{
+background:#FF9933;
+}
+
+.content{
+    padding: 20px;
+    display: none;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+img{
+    width: 100%;
+    height: 900px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+/* Mobile Devices */
+@media (max-width: 600px){
+
+.container{
+width:95%;
+}
+
+.head{
+font-size:18px;
+padding:15px;
+}
+
+.content{
+font-size:16px;
+}
+
+img{
+height:380px;
+}
+
+}
+
+</style>
+
+<body>
+   <div class="container">
+    <h1>Indian Armed Forces</h1>
+    <div class="box">
+        <div class="head" id="col1">
+          Indian Army   
+        </div>
+        <div class="content" id="armysub">
+
+        <p>
+        The Indian Army protects the land borders of India.
+        It is the largest branch of the Indian Armed Forces.
+        Its motto is <b>"Service Before Self".</b>
+        </p>
+        
+        <img src="https://i.pinimg.com/736x/69/21/1a/69211ae1f9bed4b21ce68a6efb5d786b.jpg" alt="Army">
+
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="head" id="col2">
+           Indian Navy  
+        </div>
+        <div class="content" id="navysub">
+        <p>
+        The Indian Navy protects India's sea borders.
+        It secures the Indian Ocean Region and performs rescue operations. Its motto is <b>"Sham No Varunah".</b>
+        </p>
+        <img src="https://i.pinimg.com/736x/57/05/ac/5705acca50dbce63713de3f1d0e7309b.jpg" alt="Navy">
+        </div>
+    </div>
+    <div class="box">
+
+<div class="head" id="col3">
+Indian Air Force
+</div>
+
+<div class="content" id="airsub">
+
+<p>
+The Indian Air Force protects India's airspace.
+Its motto is <b>"Touch the Sky with Glory".</b>
+</p>
+<img src="https://i.pinimg.com/736x/73/da/aa/73daaa6b01312cce0bb3d700fa1c80b3.jpg" alt="Air Force">
+    </div>
+    </div>
+    <div class="box">
+
+<div class="head" id="col4">
+Special Forces
+</div>
+
+<div class="content" id="specialsub">
+
+<p>
+PARA SF, MARCOS and Garud Commandos carry out counter-terrorism and special missions.Its motto is <b>"Men Apart,Every Man an Emperor","Shatrujeet","Balidan Param Dharma".</b>
+</p>
+
+<img src="https://i.pinimg.com/736x/f9/9e/fd/f99efd396b8343aa8c51e4a08fd591f3.jpg">
+
+</div>
+</div>
+</div> 
+<script>
+
+$("#armysub").hide();
+$("#navysub").hide();
+$("#airsub").hide();
+$("#specialsub").hide();
+
+$(document).ready(function(){
+    $("#col1").click(function(){
+        
+        $("#navysub").slideUp(500);
+        $("#airsub").slideUp(500);
+        $("#specialsub").slideUp(500); 
+        
+        $("#armysub").slideToggle(500);
+
+        $("#armysub").css({"background":"#808000","color":"white",
+"width":"100%"});
+    });
+
+    $("#col2").click(function(){
+        
+        $("#armysub").slideUp(500);
+        $("#airsub").slideUp(500);
+        $("#specialsub").slideUp(500); 
+        
+        $("#navysub").slideToggle(500);
+
+        $("#navysub").css({"background":"#0b1d3a","color":"white",
+"width":"100%"});
+    });
+
+    $("#col3").click(function(){
+        
+        $("#armysub").slideUp(500);
+        $("#navysub").slideUp(500);
+        $("#specialsub").slideUp(500); 
+        
+        $("#airsub").slideToggle(500);
+
+        $("#airsub").css({"background":"skyblue","color":"black",
+"width":"100%"});
+    });
+
+    $("#col4").click(function(){
+        
+        $("#armysub").slideUp(500);
+        $("#navysub").slideUp(500);
+        $("#airsub").slideUp(500); 
+        
+        $("#specialsub").slideToggle(500);
+
+        $("#specialsub").css({"background":"green","color":"white",
+"width":"100%"});
+    });
+
+});
+</script>
+</body>
+</html>
