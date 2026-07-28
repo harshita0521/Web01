@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musical Instruments</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<style>
+    *{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#1d2671,#c33764);
+    color: white;
+}
+
+header{
+    text-align: center;
+    padding: 30px 20px;
+    background: #111;
+    border-bottom: 5px solid gold;
+}
+
+header h1{
+    font-size: 42px;
+    margin-bottom: 10px;
+    color: gold;
+}
+
+/* Container */
+.container{
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+
+/* Cards */
+.card{
+    background: white;
+    color: black;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
+    transition: 1s;
+}
+
+.card:hover{
+    transform: translateY(-3px);
+}
+
+.card h2{
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.card img{
+    width: 100%;
+    height:500px;
+    object-fit: cover;
+}
+
+.card p{
+    padding: 20px;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+/* Table */
+
+.tableSection{
+    width: 90%;
+    margin: 50px auto;
+}
+
+.tableSection h2{
+    text-align: center;
+    margin-bottom:20px;
+    color:gold;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background:white;
+    color: black;
+}
+
+table th{
+    background: #111;
+    color: white;
+    padding: 15px;
+}
+
+table td{
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table tr:hover{
+    background:#ffeaa7;
+}
+
+/* Footer */
+
+footer{
+    background:#111;
+    text-align:center;
+    padding:30px;
+    margin-top:40px;
+}
+
+footer h3{
+    color:gold;
+    margin-bottom:10px;
+}
+
+/* Mobile Screen */
+
+@media(max-width:600px){
+
+header h1{
+    font-size:30px;
+}
+
+.container{
+    grid-template-columns:1fr;
+}
+
+.card img{
+    height:300px;
+}
+
+table{
+    font-size:14px;
+}
+
+table th,
+table td{
+    padding:10px;
+}
+
+}
+</style>
+
+<body>
+<header id="head">
+    <h1>🎵 Musical Instruments Gallery 🎵</h1>
+    <p>Explore the beauty of traditional and modern musical instruments.</p>
+</header>
+
+<div class="container">
+
+<!-- Guitar -->
+<div class="card">
+    <h2 id="guitarHead">🎸 Guitar</h2>
+    <img id="guitarImg" src="https://i.pinimg.com/1200x/b6/1c/5c/b61c5ca3772b5f20952d83f86214c159.jpg" alt="Guitar">
+
+<p id="guitarText">
+
+The guitar is one of the most popular string instruments. It is widely used in rock, pop, classical and folk music around the world.
+
+</p>
+</div>
+
+<!-- Tabla -->
+ <div class="card">
+    <h2 id="tablaHead">🥁 Tabla</h2>
+    <img id="tablaImg" src="https://i.pinimg.com/736x/cf/a9/85/cfa98585fa165d937154fcf2fb624780.jpg" alt="Tabla">
+
+<p id="tablaText">
+    Tabla is a famous Indian percussion instrument used in classical, devotional and folk music.
+
+</p>
+</div>
+
+<!-- Harmonica -->
+
+<div class="card">
+
+<h2 id="harmonicaHead">🎼 Harmonica</h2>
+
+<img id="harmonicaImg"
+src="https://i.pinimg.com/1200x/83/9d/1a/839d1ad0f0583ba28c5afb119b638ecf.jpg"
+alt="Harmonica">
+
+<p id="harmonicaText">
+
+The harmonica is a small wind instrument that is easy to carry and is used in blues, folk and country music.
+
+</p>
+
+</div>
+
+<!-- Sitar -->
+
+<div class="card">
+
+<h2 id="sitarHead">🎻 Sitar</h2>
+
+<img id="sitarImg"
+src="https://i.pinimg.com/736x/26/f4/f8/26f4f80c18015d2f153dbb8a1b00f75d.jpg"
+alt="Sitar">
+
+<p id="sitarText">
+
+The sitar is a traditional Indian string instrument known for its rich and soothing sound.
+
+</p>
+
+</div>
+
+</div>
+
+<section class="tableSection">
+
+<h2 id="tableHeading">Instrument Information</h2>
+
+<table id="musicTable">
+
+<tr>
+<th>Instrument</th>
+<th>Family</th>
+<th>Origin</th>
+</tr>
+
+<tr>
+<td>Guitar</td>
+<td>String</td>
+<td>Spain</td>
+</tr>
+
+<tr>
+<td>Tabla</td>
+<td>Percussion</td>
+<td>India</td>
+</tr>
+
+<tr>
+<td>Harmonica</td>
+<td>Wind</td>
+<td>Germany</td>
+</tr>
+
+<tr>
+<td>Sitar</td>
+<td>String</td>
+<td>India</td>
+</tr>
+
+</table>
+
+</section>
+
+<footer id="foot">
+
+<h3>🎶 Music is the language of the soul 🎶</h3>
+
+<p>Designed using HTML, CSS & jQuery</p>
+
+</footer>
+
+<!-- External JavaScript -->
+
+<script src="script.js"></script>
+
+    
+</body>
+</html>

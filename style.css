@@ -1,0 +1,19 @@
+/* Classes Used By jQuery */
+
+.headingEffect{
+    background:#ff9800;
+    color:white ;
+}
+
+.imageEffect{
+    border:8px solid gold;
+    transform:scale(1.05);
+}
+
+.textEffect{
+    background:#fff8dc;
+    color:#222;
+    border-left:8px solid crimson;
+}
+
+
