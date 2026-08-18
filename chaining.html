@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>jQuery Animate Callback</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+
+</head>
+
+<style>
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff4e6;
+    text-align: center;
+    padding: 30px;
+}
+
+h1{ 
+    color: #12343b;
+    margin-bottom: 25px;
+}
+
+h2{
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.area{
+    width: 90%;
+    max-width: 800px;
+    height: 300px;
+    background: white;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#box{
+    width: 120px;
+    height: 80px;
+    background: #e76f51;
+    color: white;
+    position: absolute;
+    left: 20px;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+button{
+    padding: 12px 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #264653;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover{
+    background: rgb(93, 93, 190);
+}
+
+#message{
+    margin-top: 20px;
+    color: #292929;
+    font-size: 18px;
+}
+
+@media(max-width:600px){
+    body{
+        padding: 20px 10px;
+    }
+
+    h1{
+        font-size: 28px;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+
+    .area{
+        width:100%;
+        height: 250px;
+    }
+
+    #box{
+        width: 100px;
+        height: 70px;
+        font-size: 18px;
+    }
+}
+</style>
+
+<body>
+  <h1> jQuery Animate </h1>  
+  <h2> Animate Callback & Method Chaining</h2>
+
+  <div class="area">
+
+    <div id="box">
+        jQuery
+    </div>
+  </div>
+
+  <button id="start">
+    Start Animation
+  </button>
+
+  <button id="reset">
+    Reset
+  </button>
+
+  <p id="message">
+    Click Start Animation
+  </p>
+
+  <script>
+    $(document).ready(function(){
+
+        /* Start Button */
+
+        $("#start").click(function(){
+            $("#message").text("Animation Running...");
+
+            $("#box").animate({
+                left:"300px"},1000)
+
+                .delay(500)
+
+                .animate({
+                    width:"200px",
+                    height:"120px",
+                    borderRadius:"30px"
+                },1000,complete);
+        });
+
+        /* Callback Function */
+
+        function complete(){
+            $("#message").text("Animation Completed - Callback Executed!");
+
+            $("#box").css({
+                "background":"purple"
+            });
+        }
+
+
+        /* Reset Button */
+
+        $("#reset").click(function(){
+            $("#box").stop(true,true);
+            $("#box").css({
+                "left":"20px",
+                "width":"120px",
+                "height":"80px",
+                "borderRadius":"10px",
+                "background":"#e76f51"
+            });
+
+            $("#message").text("Click Start Animation");
+        });
+    });
+  </script>
+
+</body>
+</html>
