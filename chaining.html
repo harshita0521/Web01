@@ -2,15 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width= , initial-scale=1.0">
-    <title>jQuery Animate Callback</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation, Callback and Chaining</title>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
 </head>
 
 <style>
-
 *{
     margin: 0%;
     padding: 0%;
@@ -22,161 +20,229 @@ body{
     background: #fff4e6;
     text-align: center;
     padding: 30px;
+    overflow-x: hidden;
 }
 
-h1{ 
+h1{
     color: #12343b;
+    margin-bottom: 10px;
+}
+
+#message{
+    font-size: 18px;
+    color: #444;
     margin-bottom: 25px;
 }
 
-h2{
-    color: #555;
-    margin-bottom: 25px;
-}
-
-.area{
-    width: 90%;
-    max-width: 800px;
-    height: 300px;
-    background: white;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    margin: 20px auto;
-    position: relative;
-    overflow: hidden;
-}
+/* Animated Box */
 
 #box{
-    width: 120px;
-    height: 80px;
+    width: 140px;
+    height: 100px;
     background: #e76f51;
     color: white;
-    position: absolute;
-    left: 20px;
-    top: 100px;
+    position: relative;
+    left: 5px;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
     display: flex;
-    justify-content: center;
     align-items: center;
-    border-radius: 8px;
-    font-size: 20px;
+    justify-content: center;
 }
 
 button{
-    padding: 12px 25px;
-    margin: 10px;
+    padding: 12px 22px;
+    margin: 8px;
     border: none;
-    border-radius: 5px;
-    background: #264653;
+    border-radius: 8px;
+    background: #2a9d8f;
     color: white;
     font-size: 16px;
     cursor: pointer;
 }
+
 button:hover{
-    background: rgb(93, 93, 190);
+    background: #12343b;
 }
 
-#message{
-    margin-top: 20px;
-    color: #292929;
-    font-size: 18px;
+#myImage{
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    margin: 25px auto;
+    display: none;
+    box-shadow: 0px 5px 15px gray;
 }
+
 
 @media(max-width:600px){
+
     body{
-        padding: 20px 10px;
+        padding: 20px;
     }
 
     h1{
-        font-size: 28px;
-    }
-
-    h2{
-        font-size: 20px;
-    }
-
-    .area{
-        width:100%;
-        height: 250px;
+        font-size: 26px;
     }
 
     #box{
-        width: 100px;
-        height: 70px;
-        font-size: 18px;
+        margin-left: 20px;
+    }
+
+    button{
+        width: 80%;
+    }
+
+    #myImage{
+        width: 90%;
+        height: 300px;
     }
 }
+
 </style>
 
 <body>
-  <h1> jQuery Animate </h1>  
-  <h2> Animate Callback & Method Chaining</h2>
+    
+    <h1>
+        jQuery Animation
+    </h1>
 
-  <div class="area">
+    <p id="message">
+     Click Start Animation
+    </p>
+
+    <!-- Animated Box -->
 
     <div id="box">
-        jQuery
+        Nature Vibes 
     </div>
-  </div>
-
-  <button id="start">
-    Start Animation
-  </button>
-
-  <button id="reset">
-    Reset
-  </button>
-
-  <p id="message">
-    Click Start Animation
-  </p>
-
-  <script>
-    $(document).ready(function(){
-
-        /* Start Button */
-
-        $("#start").click(function(){
-            $("#message").text("Animation Running...");
-
-            $("#box").animate({
-                left:"300px"},1000)
-
-                .delay(500)
-
-                .animate({
-                    width:"200px",
-                    height:"120px",
-                    borderRadius:"30px"
-                },1000,complete);
-        });
-
-        /* Callback Function */
-
-        function complete(){
-            $("#message").text("Animation Completed - Callback Executed!");
-
-            $("#box").css({
-                "background":"purple"
-            });
-        }
 
 
-        /* Reset Button */
+    <!-- Image -->
 
-        $("#reset").click(function(){
-            $("#box").stop(true,true);
-            $("#box").css({
-                "left":"20px",
-                "width":"120px",
-                "height":"80px",
-                "borderRadius":"10px",
-                "background":"#e76f51"
-            });
+    <img id="myImage"
+        src="https://plus.unsplash.com/premium_photo-1734463718301-d74b7e9e46dd?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Nature Heart Image">
 
-            $("#message").text("Click Start Animation");
-        });
+
+        <!-- Sound -->
+
+        <audio id="mysound">
+
+            <source src="Images/naturesound.mp3" type="audio/mpeg">
+        </audio>
+
+
+        <!-- Buttons -->
+
+        <button id="start">
+            Start Animation
+        </button>
+
+        <button id="color">
+            Change Color
+        </button>
+
+        <button id="reset">
+            Reset
+        </button>
+
+        <script>
+
+$(document).ready(function(){
+
+
+    /* START FUNCTION */
+
+    $("#start").click(function(){
+
+        $("#message").text("Animation Running...");
+
+        $("#box")
+        .animate({left:"250px"},1000)
+
+        .delay(500)
+
+        .animate({
+            width:"200px",
+            height:"120px",
+            borderRadius:"30px"
+        },1000,complete);
     });
-  </script>
+
+
+    /* CALLBACK FUNCTION */
+
+    function complete(){
+
+        $("#message").text("Animation Completed!");
+
+        $("#box").css({
+            "background":"#2a9d8f"
+        });
+
+        $("#myImage").fadeIn(1000);
+
+        $("#mysound")[0].play();
+    }
+
+
+
+    /* RANDOM COLOR FUNCTION */
+
+    function changecolor(){
+
+        var r,g,b;
+
+        r = Math.round(Math.random()*255);
+        g = Math.round(Math.random()*255);
+        b = Math.round(Math.random()*255);
+
+        $("#box").css({
+            "background":"rgb("+r+","+g+","+b+")"
+        });
+    }
+
+
+
+    /* COLOR BUTTON */
+
+    $("#color").click(function(){
+
+        changecolor();
+    });
+
+    /* RESET BUTTON */
+
+    $("#reset").click(function(){
+
+        $("#box").stop(true,true);
+
+        $("#box").css({
+
+            "left":"5px",
+            "width": "140px",
+            "height": "100px",
+            "borderRadius":"10px",
+            "background":"#e76f51"
+        });
+
+
+    $("#myImage").fadeOut(500);
+
+    $("#mysound")[0].pause();
+    $("#mysound")[0].currentTime = 0;
+
+    $("#message").text("Click Start Animation");
+
+    });
+
+
+});
+
+</script>
 
 </body>
 </html>
